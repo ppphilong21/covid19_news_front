@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "Times New Roman",Times,serif;
+    color: #333;
+    background: #fff;
+}
+ul li a {
+    margin: 0;
+    padding: 0;
+}
+img{
+    object-fit: cover;
+    object-position: center;
+}
+
+.container{
+    width: 100%;
+    padding-left:15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px){
+    .container{
+        max-width: 540px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px){
+    .container {
+        max-width: 1110px;
+    }
+}
+
+
+.col-12{
+    width: 100%;
+}
+.col-8{
+    width: calc(100% - 40rem);
+}
+.col-6{
+    width: calc(50% - 2rem);
+}
+.col-3{
+    width: calc(100% / 3 - 1rem);
+}
+
+.titleBar{
+    position: relative;
+}
+.titleBar::before{
+
+}
+.titleBar::after{
+
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}

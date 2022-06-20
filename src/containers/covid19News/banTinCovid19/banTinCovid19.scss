@@ -1,0 +1,76 @@
+@import '../covid19News.scss';
+@import '../../../styles/base';
+@import '../../../mixins';
+@import '../../../styles/variable';
+
+
+
+
+.news-box {
+    padding-right: 2rem;
+    width: calc(50% - 2rem);
+  }
+  
+  .news-box--left {
+    position: relative;
+  }
+  
+  .news-box--left::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #ccc;
+    right: -1rem;
+  }
+  
+  .home-news--box {
+    padding: 20px 0;
+  }
+  
+  .news-img--width {
+    width: 23rem;
+    margin-right: 1.8rem;
+  }
+  
+  .home-news--img {
+    height: max-content;
+  }
+  
+  .news-title--width {
+    width: calc(100% - 23rem);
+  }
+  
+  .home-news-title {
+    letter-spacing: 0.02em;
+    line-height: 130%;
+    font-size: 1.6rem;
+    font-family: "Merriweather";
+    color: #333;
+    font-weight: 600;
+  }
+  .home-news--space {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .home-news-sub {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 1.4rem;
+    font-family: "Merriweather";
+    color: #444;
+    font-weight: 500;
+  }
+  .news--line {
+    border-bottom: 1px solid #ccc;
+  }
+  .home-news--img img{
+    width: 100%;
+  }

@@ -1,0 +1,180 @@
+@import '../../styles/base';
+@import '../../styles/mixins';
+@import '../../styles/variable';
+
+
+.hide{
+    display: none !important;
+}
+.show{
+    display: inline-block !important;
+}
+.icon {
+    cursor: pointer;
+}
+.menu-close{
+    display: none;
+}
+
+.header-top {
+    padding-top: 4px;
+    padding-bottom: 4px;;
+}
+.date-time{
+    @include headingText(14px, "Roboto", 500, $textSub);
+    margin-left: 14rem;
+}
+//for responsive
+.date-time--replace {
+    display: none;
+}
+.header-top--search input{
+    width: 0;
+    outline: none;
+    border: none;
+    background-color: #eceaea;
+    border-radius: 2px solid;
+    padding: 0 10px;
+    height: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.header-top--search:hover input{
+    width: 20rem;
+    height: 2.8rem;
+} 
+
+
+.header-top--search input::placeholder {
+    @include headingText(14px, "Roboto", 500, $textSub);
+}
+.search-icon {
+    cursor: pointer;
+    @include headingText(16px, "Font Awesome 6 Free" , 900 , $textSub);
+}
+.header-top--telephone{
+    border-radius: 10px;
+    background-color: $textRed;
+    height: 2.8rem; 
+    padding: 0 4px;
+    margin-left: 10px;
+   
+}
+.header-top--telephone p {
+    @include headingText(14px, "Roboto", 600, $textWhite);
+    line-height: 2.8rem;
+    padding: 0px 4px;
+}
+
+.header-middle{
+    background: url("../../assets/img/bg-header.png") no-repeat center;
+    background-size: cover;
+}
+.header-middle--img{
+    width: 12rem;
+    height: 12rem;
+    position: relative;
+    top: -3.2rem;
+}
+.header-middle--img img {
+    width: 100%;
+}
+.header-middle-title{
+    @include headingText(18px, 'Merriweather', 600, $textWhite);
+    margin-top: 6rem;
+    margin-left: 2rem;
+    letter-spacing: -0.6px;
+}
+
+.header-bottom{
+    background-color: $textBlue;
+    padding: 4px 0;
+    
+    
+}
+.header-bottom--menu ul{
+    list-style: none;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    
+}
+.nav-link{
+    text-decoration: none;
+    @include headingText(1.6rem, "", 500, $textWhite);
+    line-height: 2.6rem;
+    display: block;
+    padding: 0 6px 0px 6px;
+    white-space: nowrap;
+}
+.nav-link:hover {
+    border-bottom: 1px solid $textWhite;
+}
+
+//sub-menu
+.header-sub--responsive{
+      display: none;
+}
+
+
+
+  //responsive
+
+  @media (max-width: 767.8px) {
+    .header-top--search:hover input{
+        width: 0;
+        height: 0;
+    }
+    .header-middle--img{
+        top: 0;
+    }
+    .date-time{
+        margin-left: 0rem;
+        display: none;
+    }
+    .date-time--replace{
+        display: inline-block;
+        margin-left: 4.4rem;
+        font-size: 1.6rem;
+    }
+    .header-middle-title{
+        margin-top: 4rem;
+    }
+
+    //header-sub--menu
+    .header-sub--wrap{
+        margin-top: 1rem;
+        
+    }
+    .header-sub--responsive{
+        //display: inline-block;
+        left: 0;
+        position: fixed;
+        top: 3.6rem;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+    }
+    .header-sub--search input{
+        width: 100%;
+        height: 3rem;
+        outline: none;
+        border: none;
+        background-color: #eceaea;
+        border-radius: 2px solid;
+        padding: 0 10px;
+        border-radius: 4px;
+        margin-right: 10px
+    }
+    .header-sub--wrap ul{
+        list-style: none;
+        margin-top: 2rem;
+    }
+    .header-sub--wrap ul li{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+  }

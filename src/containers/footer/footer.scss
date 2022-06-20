@@ -1,0 +1,50 @@
+@import '../../styles/base';
+
+
+.footer {
+    background-color: #2e3192;
+  }
+  
+  .footer-info {
+    padding-top: 1rem;
+  }
+  
+  .footer-img--logo {
+    position: relative;
+    top: -3rem;
+  }
+  
+  .footer-details {
+    margin-left: 3rem;
+    color: white;
+  }
+  
+  .footer-details--content {
+    font-size: 1.6rem;
+    font-family: "Merriweather";
+    color: white;
+    font-weight: 600;
+  }
+  .footer-details--address, .footer-details--phone {
+    font-size: 1.4rem;
+    font-family: "Merriweather";
+    color: white;
+    font-weight: 600;
+  }
+  .footer-details--email {
+    font-size: 1.2rem;
+    font-family: "Merriweather";
+    color: white;
+    font-weight: 600;
+  }
+  .img-vscorp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 991.98px) {
+    .img-vscorp {
+      width: 30%;
+    }
+  }

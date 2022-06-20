@@ -1,0 +1,51 @@
+.contact-article {
+    padding-left: 2rem;
+  }
+  
+  .hospital-numbers {
+    padding: 0;
+    max-height: 360px;
+    overflow-y: auto;
+    border: 1px solid rgb(234, 234, 244);
+    box-sizing: border-box;
+    border-radius: 0px 0px 3px 3px;
+  }
+  
+  .numbers-details {
+    border-bottom: 1px solid rgb(234, 234, 244);
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Merriweather";
+    color: #333;
+    font-weight: 500;
+  }
+  .hospital-phone {
+    text-align: right;
+  }
+  
+  .hospital-phone--list {
+    margin-bottom: 2rem;
+    background: rgb(240, 239, 244);
+    border-radius: 3px 3px 0 0;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: "Merriweather";
+    color: #333;
+    font-weight: 600;
+  }
+  @media (min-width: 992px) {
+    .box-list--line {
+      border-top: 1px solid #ccc;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 991.98px) {
+    .sub-box--line {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  

@@ -1,0 +1,212 @@
+@import '../../styles/base';
+@import '../../styles/mixins';
+@import '../../styles/variable';
+
+  //content section
+// .content{
+//     margin: 1rem 0 2rem;
+// }
+.content-body--details{
+    margin: 3rem 0 2rem;
+}
+
+.title{
+    margin-bottom: 1rem;
+}
+.title-bars{
+    position: relative;
+}
+.title-bars::before{
+    @include titleBar(3px, 2.6rem,$textBlue,0,0,"", "");
+    
+}
+.title-bars::after{
+    @include titleBar(3px, 2.6rem,$textRed,0, 3px,"", "");
+
+}
+.title-name{
+    text-decoration: none;
+    list-style: none;
+   
+}
+.title-name--VN{
+    @include headingText(2.2rem, 'Merriweather', 800, $textBlue);
+    margin-right: 1rem;
+    padding-left:1.6rem; 
+}
+.title-name--World{
+    @include headingText(1.8rem, 'Merriweather', bold, rgba(46, 49, 146, 0.6));
+    
+}
+.title-name--World::before{
+    content: "/";
+    color:rgba(46, 49, 146, 0.6);
+    height: 24px;
+    left: 0;
+    font-size: 34px;
+    margin-right: 16px;
+    position: relative;
+    top: 0px;
+}
+.content-information--width{
+    width: calc(100% / 3 - 1rem);
+}
+
+.content-information--details{
+    padding: 8px;
+    text-align: center;
+    height: 8rem;
+   // background-color: var(--color) ;
+}
+.name-details{
+    @include headingText(1.3rem, 'Merriweather', 600, $textType);
+    text-transform: uppercase;
+}
+.number-details{
+    @include headingText(1.8rem, 'Roboto', 600, var(--colorText));
+    font-weight: 600;
+}
+.time-details{
+    @include headingText(1.3rem, 'Merriweather', 500, $textSub);
+}
+.time-details span{
+    font-weight: bold;
+}
+
+//content-body 
+.number-covid{
+    background-color:rgba(237, 28, 36, 0.1) ;
+}
+.number-success{
+    background-color:rgba(40, 167, 69, 0.1);
+}
+.number-death{
+    background-color:#F0EFF4;
+}
+.content-article{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $textBlue;
+}
+.content-article--details{
+    padding-right: 2rem;
+}
+.article--img{
+    border-radius: 3px;
+}
+.article--heading{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.article--heading-details{
+    @include headingText(2.4rem, 'Merriweather', 600, $textType);
+}
+
+.article--subHeading a{
+    @include headingText(1.6rem, 'Arial', normal, $textSub);
+}
+
+.content-article--information{
+    padding-left: 1rem;
+}
+.article-wrap{
+    height: 48rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.content-article--img{
+    width: 100%;
+}
+
+.article-information--wrap{
+    border-left: 1px solid rgba(0,0,0,.1);
+    padding-top: 2.2rem;
+    padding-left: 1rem; 
+   
+    
+    background: #f0f8ff;
+    position: relative;
+}
+.article-information--wrap::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $textBlue;
+    left: -5px;
+    top: 1.6rem;
+}
+.article-information--wrap::after{
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.title-font--size{
+    @include headingText(2.2rem, 'Merriweather', 600, $textBlue);
+    padding-left: 1.4rem;
+}
+
+.time {
+    position: absolute;
+    top: 13px;
+    font-size: 14px;
+    background: #f0f8ff;
+    background-color: #f0f8ff;
+    left: 5rem;
+    z-index: 2;
+}
+.notice{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    @include headingText(1.8rem, 'Merriweather',600, $textType);
+}
+.details-heading{
+    margin-bottom: 1rem;
+    @include headingText(1.6rem, '',normal, $textSub);
+}
+.details-body{
+   padding-bottom: 1rem;
+    @include headingText(1.6rem, '',normal, $textSub);
+}
+.btn-details{
+    justify-content: center;
+    margin-top: 2rem;
+}
+.more-details{
+    @include headingText(1.6rem, 'Merriweather',normal,$textBlue);
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+
+@media (max-width: 767.98px) {
+    .content-article--information{
+        padding: 0;
+    }
+}
+
+
+
+//Table - details
+.table-wrap{
+    
+}
+.table-headline{
+    @include headingText(1.8rem, 'Merriweather',600, $textType);
+}
+
+.table-details{
+    @include headingText(1.6rem, '',normal, $textType);
+}
+.table-details--numberPerDay{
+    color: $textRed;
+}

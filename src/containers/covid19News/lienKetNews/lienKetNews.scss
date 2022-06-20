@@ -1,0 +1,17 @@
+.lienKet-box{
+    width: 25rem;
+    margin-right: 2rem;
+}
+
+@media (max-width: 991.98px) {
+    .lienKet-box {
+      width: calc(33.3333333333% - 2rem);
+      margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: 767.98px) {
+    .lienKet-box {
+      width: calc(50% - 2rem);
+      margin-bottom: 1rem;
+    }
+  }
