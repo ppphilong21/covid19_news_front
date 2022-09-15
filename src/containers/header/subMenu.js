@@ -3,12 +3,7 @@ function subMenu(){
     const iconClickShow = document.querySelector('.menu-bars');
     const iconClickClose = document.querySelector('.menu-close');
     const iconShow = document.querySelector('.search-icon')
-    console.log(subMenu );
-   /* iconShow.addEventListener('click', () => {
-        subMenu.classList.add('show');
-        iconClickShow.classList.add('hide');
-        iconClickClose.classList.remove('hide');
-    })*/
+ 
 
     iconClickShow.addEventListener('click', () => {
         subMenu.classList.add('show');

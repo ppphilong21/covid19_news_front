@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+
 import React, {Fragment} from 'react';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Bantin from './pages/bantin'
@@ -11,42 +11,29 @@ import Thegioi from './pages/thegioi'
 import Tintuc from './pages/tintuc'
 import Vaccine from './pages/vaccine'
 import Test from './pages/test'
-import LienKetNews from './containers/covid19News/lienKetNews/lienKetNews'
+
 import Header from './containers/header/Header'
 // import VietNamAndWorld from './containers/VietNamAndWorld/vietNamWorld'
 // import Covid19News from './containers/covid19News/covid19News'
-import {handleCovidCaseApi} from './services/covidcase'
-import {handleHistoryCovidCaseAPI} from './services/historyCovidCase'
+// import {handleCovidCaseApi} from './services/covidcase'
+// import {handleHistoryCovidCaseAPI} from './services/historyCovidCase'
 import {handleCovidNewsApi} from './services/covidNews'
 import Footer from './containers/footer/footer'
 //import { render } from 'react-dom';
 function App() {
    
-   const [covidDetails, setCovidDetails] = useState({});
-   const [historyCovidDetails, setHistoryCovidDetails] = useState({});
+  //  const [covidDetails, setCovidDetails] = useState({});
+  //  const [historyCovidDetails, setHistoryCovidDetails] = useState({});
    const [covidNews, setCovidNews] = useState({});
-   const TYPE_ONE = "ban tin covid19";
+  
    useEffect( () => {
           async function fetchData(){
             let mounted = true;
-            await handleCovidCaseApi('ALL')
-              .then(items => {
-                if(mounted) {
-                  setCovidDetails(items)
-                }
-              })
-              await handleHistoryCovidCaseAPI('ALL')
-              .then(items => {
-                  if(mounted) {
-                    setHistoryCovidDetails(items)
-                    console.log('success');
-                  }
-                })
                 await handleCovidNewsApi('ALL')
                 .then(items => {
                   if(mounted) {
                     setCovidNews(items)
-                    console.log('success');
+                  
                   }
                 })
             return () => mounted = false;
@@ -75,9 +62,6 @@ function App() {
                 <Route path="/thegioi" element={<Thegioi covidNews = {covidNews} exact/>}/>
               </Routes>
             </Fragment>
-              {/* <VietNamAndWorld historyCovidDetails={historyCovidDetails} covidDetails={covidDetails}  />
-              <Covid19News  covidNews={covidNews} /> */}
-              {/* <LienKetNews /> */}
             <Footer/>
           </Router>
          

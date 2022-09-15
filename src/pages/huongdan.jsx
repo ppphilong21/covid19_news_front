@@ -4,18 +4,18 @@ import Test from '../containers/test/test'
 import Telephone from '../containers/telephone/telephone'
 
 
-Chidao.propTypes = {
-    covidNews: PropTypes.object,
+Huongdan.propTypes = {
+    covidNews: PropTypes.object.isRequired,
 };
 
 const TYPE_ONE = 'Hướng dẫn';
 
-function Chidao(props) {
+function Huongdan(props) {
  
     const covidNews = props.covidNews;
 
     const banTinCovid19 = [];
-    console.log(covidNews);
+  
 
     const covidNewsArr = (covidNewsArrType, typeNews ) => {
       
@@ -54,4 +54,4 @@ function Chidao(props) {
     );
 }
 
-export default Chidao;
+export default Huongdan;

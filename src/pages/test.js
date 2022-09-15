@@ -29,14 +29,14 @@ function Test() {
               .then(items => {
                   if(mounted) {
                     setHistoryCovidDetails(items)
-                    console.log('success');
+                 
                   }
                 })
                 await handleCovidNewsApi('ALL')
                 .then(items => {
                   if(mounted) {
                     setCovidNews(items)
-                    console.log('success');
+                  
                   }
                 })
             return () => mounted = false;

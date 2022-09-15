@@ -68,7 +68,7 @@ function Header(){
         <div className="header-middle">
           <div className="container d-flex">
             <div className="header-middle--img">
-              <img src={logo} alt="" />
+              <img src={logo} />
             </div>
             <div className="header-middle-title">
               CỔNG THÔNG TIN CỦA BỘ Y TẾ VỀ ĐẠI DỊCH COVID-19

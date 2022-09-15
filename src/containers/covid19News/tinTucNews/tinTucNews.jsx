@@ -1,28 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './tinTucNews.scss'
+import { Link } from "react-router-dom";
 tinTucNews.propTypes = {
-    tinTucNews: PropTypes.object,
+    tinTucNews: PropTypes.array.isRequired,
 };
 
 function tinTucNews(props) {
     const tinTucNews = props.tinTucNews;
     return (
-        <div class="col-12 news-space">
-        <div class="title">
-            <a href="#" class="title-bars title-name title-name--VN">Tin Tức</a>      
+        <div className="col-12 news-space">
+        <div className="title">
+            <Link to="/tintuc" className="title-bars title-name title-name--VN">Tin Tức</Link>      
         </div>
-        <div class="news-wrapper d-flex flex-wrap  ">
-          <div class=" d-flex flex-wrap ">
+        <div className="news-wrapper d-flex flex-wrap  ">
+          <div className=" d-flex flex-wrap ">
             {tinTucNews && tinTucNews.map((item) => {
                 return ( 
-                    <div class="tintuc-box" key={item.id}>
-                    <div class="home-news--img">
-                        <a href={item.linkNews}><img src={item.linkImage} alt/></a>
+                    <div className="tintuc-box" key={item.id}>
+                    <div className="home-news--img">
+                        <a href={item.linkNews}><img src={item.linkImage}/></a>
                     </div>
-                    <div class="home-news-title--box  ">
+                    <div className="home-news-title--box  ">
                         <a href={item.linkNews}>
-                            <div class="home-news-title home-news--space article--heading">
+                            <div className="home-news-title home-news--space article--heading">
                             {item.headingTitle}
                             </div>
                         </a>

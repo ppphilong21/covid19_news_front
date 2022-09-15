@@ -4,10 +4,11 @@ import Notify from '../notify/notify'
 import '../VietNamAndWorld/vietNamWorld.scss';
 
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 vietNamWorld.propTypes = {
-    covidDetails: PropTypes.object,
-    historyCovidDetails: PropTypes.object,
+    covidDetails: PropTypes.object.isRequired,
+    historyCovidDetails: PropTypes.object.isRequired,
 };
 
 function vietNamWorld(props) {
@@ -29,20 +30,24 @@ function vietNamWorld(props) {
         })
     }
    let sumNumberDetails = (Arr) => {
-        if (Arr.length != 0){
+        if (Arr.length !== 0){
             return  Arr.reduce((accumulator, item) => Number(accumulator) + Number(item))
         }
    }
 
     return (
-        <div classNameName="content VN-TG">
+        <div className="content VN-TG">
             <div className="container">
                 <div className="content-body--details">
                     <div className="title">
-                        <a href="#" className="title-bars title-name title-name--VN">Việt Nam</a>
-
-                        <a href="#" className="title-name title-name--World">Thế giới</a>
                     
+                    <Link className="title-bars title-name title-name--VN" to="/">
+                       Việt Nam
+                    </Link>
+                    <Link className="title-name title-name--World" to="/thegioi">
+                        Thế giới
+                    </Link>
+                        
                     </div>
 
                     <div className="content-information--covid d-flex justify-content-between align-items-center">
@@ -57,7 +62,7 @@ function vietNamWorld(props) {
                             <div className="name-details">
                                 Khỏi
                             </div>
-                            <div className="number-details" style={{color: "green"}} >9.553.193</div>
+                            <div className="number-details" style={{color: "green"}} >9553193</div>
                         
                         </div>
                         <div className="content-information--width content-information--details number-death" >
@@ -77,7 +82,7 @@ function vietNamWorld(props) {
                         </div>
 
                         <div className="article-wrap">
-                            <table class="table table-hover table-wrap">
+                            <table className="table table-hover table-wrap">
                                 <thead className="table-headline">
                                     <tr>
                                         <th scope="col">Tỉnh/TP</th>

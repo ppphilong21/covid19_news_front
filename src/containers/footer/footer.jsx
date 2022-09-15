@@ -8,28 +8,28 @@ footer.propTypes = {
 
 function footer(props) {
     return (
-        <footer class="footer mt-5">
-        <div class="container d-flex justify-content-between align-items-center flex-lg-row flex-column">
-            <div class=" footer-info d-flex">
-              <div class="footer-img--logo d-md-block d-none">
+        <footer className="footer ">
+        <div className="container d-flex justify-content-between align-items-center flex-lg-row flex-column">
+            <div className=" footer-info d-flex">
+              <div className="footer-img--logo d-md-block d-none">
                   <img src={logo}></img>
               </div>
-              <div class="footer-details text-center ">
-                  <div class="footer-details--content">
+              <div className="footer-details text-center ">
+                  <div className="footer-details--content">
                       Quản lý nội dung: báo sức khỏe và đời sống - cơ quan ngôn luận của bộ y tế
                   </div>
-                  <div class="footer-details--address">
+                  <div className="footer-details--address">
                       Địa chỉ: Số 138A Giảng Võ - Quận Ba Đình - TP. Hà Nội
                   </div>
-                  <div class="footer-details--phone">
+                  <div className="footer-details--phone">
                       Đường dây nóng: 19009095
                   </div>
-                  <div class="footer-details--email">
+                  <div className="footer-details--email">
                       Email: covid19@suckhoedoisong.vn
                   </div>
               </div>
             </div>
-            <div class=" img-vscorp  mt-lg-0 mt-5">
+            <div className=" img-vscorp  mt-lg-0 mt-5">
                 <img src="https://vccorp.mediacdn.vn/vccorp-s.png"></img>
             </div>
         </div>

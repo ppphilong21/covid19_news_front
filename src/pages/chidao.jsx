@@ -5,7 +5,7 @@ import Telephone from '../containers/telephone/telephone'
 
 
 Chidao.propTypes = {
-    covidNews: PropTypes.object,
+  covidNews: PropTypes.object.isRequired,
 };
 
 const TYPE_ONE = 'chi dao chong dich';
@@ -15,7 +15,7 @@ function Chidao(props) {
     const covidNews = props.covidNews;
 
     const banTinCovid19 = [];
-    console.log(covidNews);
+    
 
     const covidNewsArr = (covidNewsArrType, typeNews ) => {
       

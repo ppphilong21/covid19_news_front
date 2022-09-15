@@ -1,20 +1,21 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 hoatDongNews.propTypes = {
-    hoatDongNews: PropTypes.object,
+    hoatDongNews: PropTypes.array.isRequired,
 };
 
 function hoatDongNews(props) {
-    console.log(props.hoatDongNews);
+    
     const hoatDongNews = props.hoatDongNews;
-    console.log(hoatDongNews);
+    
     return (
        <>
          <div className="news-box news-box--left ">
                     <div className="title">
-                        <a href="#" className="title-bars title-name title-name--VN">Hoạt động địa phương</a>      
+                        <Link to="/hoatdong" className="title-bars title-name title-name--VN">Hoạt động địa phương</Link>      
                     </div>
                     {hoatDongNews && hoatDongNews.map((item) => {
                         return (

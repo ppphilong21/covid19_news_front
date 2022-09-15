@@ -5,7 +5,7 @@ import Telephone from '../containers/telephone/telephone'
 
 
 Bantin.propTypes = {
-    covidNews: PropTypes.object,
+    covidNews: PropTypes.object.isRequired,
 };
 
 const TYPE_ONE = 'ban tin covid-19';
@@ -15,7 +15,7 @@ function Bantin(props) {
     const covidNews = props.covidNews;
 
     const banTinCovid19 = [];
-    console.log(covidNews);
+
 
     const covidNewsArr = (covidNewsArrType, typeNews ) => {
       

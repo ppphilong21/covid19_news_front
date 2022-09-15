@@ -61,6 +61,7 @@
 .name-details{
     @include headingText(1.3rem, 'Merriweather', 600, $textType);
     text-transform: uppercase;
+    font-weight: 600;
 }
 .number-details{
     @include headingText(1.8rem, 'Roboto', 600, var(--colorText));

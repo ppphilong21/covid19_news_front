@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './vaccineNews.scss'
+import { Link } from "react-router-dom";
 
 vaccineNews.propTypes = {
-    vaccineMainNews: PropTypes.object,
-    vaccineLastNews: PropTypes.object,
+    vaccineMainNews: PropTypes.array.isRequired,
+    vaccineLastNews: PropTypes.array.isRequired,
 };
 
 function vaccineNews(props) {
@@ -12,24 +13,24 @@ function vaccineNews(props) {
     const vaccineLastNews = props.vaccineLastNews;
 
     return (
-        <div class="col-12 news-space">
-        <div class="title">
-            <a href="#" class="title-bars title-name title-name--VN">Vaccine - Tiêm chủng</a>      
+        <div className="col-12 news-space">
+        <div className="title">
+            <Link to="/vaccine" className="title-bars title-name title-name--VN">Vaccine - Tiêm chủng</Link>      
         </div>
        
-        <div class="news-wrapper d-flex justify-content-between flex-lg-row flex-column">
+        <div className="news-wrapper d-flex justify-content-between flex-lg-row flex-column">
         { vaccineMainNews && vaccineMainNews.map((item) => {
             return (
-                <div class="news-box--width">
-                     <div class="home-news--img">
+                <div className="news-box--width" key={item.id}>
+                     <div className="home-news--img">
                         <a href={item.linkNews}><img src={item.linkImage}/></a>
                      </div>
-                     <div class="home-news-title--box  ">
+                     <div className="home-news-title--box  ">
                        <a href={item.linkNews}>
-                            <div class="home-news-title home-news--space article--heading">
+                            <div className="home-news-title home-news--space article--heading">
                             {item.headingTitle}
                             </div>
-                            <div class="home-news-sub article--heading">
+                            <div className="home-news-sub article--heading">
                                  {item.subTitle}
                          </div>
                          </a>
@@ -39,23 +40,23 @@ function vaccineNews(props) {
         })
                 
         }
-          {console.log(vaccineLastNews)}
-             <div class="news-box--wrap">
+          
+             <div className="news-box--wrap">
                 {
                     vaccineLastNews && vaccineLastNews.map((item) => {
-                        console.log(item.subTitle)
+                       
                         return (
                         
-                    <div class="vaccine-news--box news--line  d-flex">
-                        <div class="home-news--img box-img--width">
+                    <div key={item.id} className="vaccine-news--box news--line  d-flex">
+                        <div className="home-news--img box-img--width">
                             <a href={item.linkNews}><img src={item.linkImage}/></a>
                         </div>
-                        <div class="home-news-title--box box-title--width  ">
+                        <div className="home-news-title--box box-title--width  ">
                             <a href={item.linkNews}>
-                                <div class="home-news-title home-news--space">
+                                <div className="home-news-title home-news--space">
                                         {item.headingTitle}
                                 </div>
-                                <div class="home-news-sub article--heading">
+                                <div className="home-news-sub article--heading">
                                         {item.subTitle}
                                 </div>
                             </a>

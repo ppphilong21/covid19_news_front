@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 notify.propTypes = {
-    historyCovidDetails: PropTypes.object,
+    historyCovidDetails: PropTypes.object.isRequired,
 };
 
 let sumNumberDetails = (Arr) => {

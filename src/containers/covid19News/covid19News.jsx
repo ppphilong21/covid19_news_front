@@ -11,7 +11,7 @@ import TinTucNews from './tinTucNews/tinTucNews';
 import LienKetNews from './lienKetNews/lienKetNews'
 import '../covid19News/covid19News.scss';
 covid19News.propTypes = {
-    covidNews: PropTypes.object,
+    covidNews: PropTypes.object.isRequired,
 };
 // covid19News.defaultProps = {
 //     covidNews: {}
@@ -43,7 +43,7 @@ function covid19News(props) {
 
 
     const covidNewsArr = (covidNewsArrType, typeNews ,numberCount, count) => {
-      console.log(covidNews.CovidNewsAPI)
+      
       if (covidNews.CovidNewsAPI){
         covidNews.CovidNewsAPI.forEach((item) => {
           if (item.type === typeNews && (count < numberCount)) {
@@ -57,7 +57,7 @@ function covid19News(props) {
               linkImage: item.linkImage
             });
             count++;
-            console.log(count);
+            
           }
         })
       }

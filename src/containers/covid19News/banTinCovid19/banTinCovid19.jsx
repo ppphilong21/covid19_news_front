@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 banTinCovid19.propTypes = {
-    banTinCovid19: PropTypes.object,
+    banTinCovid19: PropTypes.array.isRequired,
 };
 
 function banTinCovid19(props) {
-    console.log(props.banTinCovid19);
+  
     const banTinCovid19 = props.banTinCovid19;
-    console.log(banTinCovid19);
+
     return (
        <>
          <div className="news-box news-box--left ">
                     <div className="title">
-                        <a href="#" className="title-bars title-name title-name--VN">Bản tin Covid-19</a>      
+                    <Link className="title-bars title-name title-name--VN" to="/bantin">
+                        Bản tin Covid-19
+                    </Link>
+                       
                     </div>
                     {banTinCovid19 && banTinCovid19.map((item) => {
                         return (
